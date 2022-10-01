@@ -9,6 +9,8 @@
         <div class="card-body">
           <h5 class="card-title">{{record.name}} ({{record.email}})</h5>
           <p class="card-text"> {{record.text}} </p>
+          <a href="{% url 'edit_record' record.id %}">Редактировать</a>
+          <a href="{% url 'confirm_delete' record.id %}"></a>
         </div>
       </div>
     {% endfor %}

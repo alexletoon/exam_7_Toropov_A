@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<form action="" method="POST" >
+    {% csrf_token %}
+    {% include 'partial/record_form.html' with button_text='Редактировать запись' record=record %}
+
+</form>
+{% endblock %}
