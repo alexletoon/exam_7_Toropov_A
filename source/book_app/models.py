@@ -15,3 +15,6 @@ class Record(models.Model):
     created_at = models.DateField(verbose_name='Дата созадния', auto_now_add=True)
     changed_at = models.DateField(verbose_name='Дата редактирования', auto_now=True)
     status = models.CharField(verbose_name='Статус', max_length=20, choices=Choices.choices, default=Choices.ACTIVE)
+
+    def __str__(self) -> str:
+        return f'Name - {self.name}, email - {self.email}, text - {self.text}, created - {self.created_at}'
