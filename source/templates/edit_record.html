@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block menu %}
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+    <a class="nav-link active" aria-current="page" href="{% url 'index_view' %}">Home</a>
+  </div>
+</div>
+{% endblock %}
 
 {% block content %}
+<h5>Редактировать запись</h5>
 <form action="" method="POST" >
     {% csrf_token %}
     {% include 'partial/record_form.html' with button_text='Редактировать запись' record=record %}

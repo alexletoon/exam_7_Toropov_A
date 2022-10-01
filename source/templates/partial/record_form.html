@@ -1,5 +1,14 @@
 {% csrf_token %}
 
-{{ form.as_p }}
+<div class="row">
+    {% for item in form %}
+    <div class="col-8">
+        <p><label for="{{item.id_for_label}}">{{item.label}}:</label></p>
+        <p>{{item}}</p>
+        <p>{{item.errors}}</p>
+    </div>
+    {% endfor %}
+</div>
 
-<input type="submit" value="{{button_text}}">
+
+<button type="submit" class="btn btn-primary" value="{{button_text}}">{{button_text}}</button>

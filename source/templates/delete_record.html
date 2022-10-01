@@ -1,13 +1,31 @@
 {% extends 'base.html' %}
 
+{% block menu %}
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+    <a class="nav-link active" aria-current="page" href="{% url 'index_view' %}">Home</a>
+  </div>
+</div>
+{% endblock %}
+
 {% block content %}
-    <p>Вы действительно хотите удалить запись?</p>
-    <p>{{record.name}}</p> 
-    <p>{{record.email}}</p> 
-    <p>{{record.text}}</p> 
-    <form action="{% url 'deleted' record.id  %}" method="POST">
-        {% csrf_token %}
-        <input type="submit" value="Удалить">
-        <a href="{% url 'index_view' %}">Нет</a>
-    </form>
+<div class="row">
+    <div class="col-8">
+        <div class="card my-3">
+            <div class="card-body">
+                <h5 class="card-title">Вы действительно хотите удалить запись?</h5>
+                <div class="card-text">
+                    <h5>{{record.name}} ({{record.email}})</h5> 
+                    <p>{{record.text}}</p> 
+                    <form action="{% url 'deleted' record.id  %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary" value="Удалить">Удалить</button>
+                        <a class="btn btn-secondary" href="{% url 'index_view' %}">Нет</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
