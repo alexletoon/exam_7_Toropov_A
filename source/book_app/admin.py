@@ -6,7 +6,7 @@ class RecordAdmin(admin.ModelAdmin):
     list_display= ['id', 'name', 'email', 'created_at', 'changed_at', 'status']
     list_filer= ['id', 'name', 'email', 'created_at', 'changed_at', 'status']
     search_fields=['name', 'created_at']
-    fields=['name', 'email', 'status']
+    fields=['name', 'email', 'status', 'text']
 
 
 admin.site.register(Record, RecordAdmin)

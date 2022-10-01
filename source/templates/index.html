@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-6">
+    {% for record in records %}
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{record.name}} ({{record.email}})</h5>
+          <p class="card-text"> {{record.text}} </p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+
