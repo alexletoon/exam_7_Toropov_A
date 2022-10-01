@@ -25,5 +25,20 @@ def edit_record_view(request, pk):
         return render(request, 'edit_record.html', context ={'form': form})
     form = RecordForm(request.POST)
     if form.is_valid():
-        Record.objects.update(**form.cleaned_data)
+        record.name = form.cleaned_data['name']
+        record.email = form.cleaned_data['email']
+        record.text = form.cleaned_data['text']
+        record.save()
+        # Record.objects.update(**form.cleaned_data)
         return redirect('index_view')
+
+    
+def delete_record_view(request, pk):
+    record = get_object_or_404(Record, pk=pk)
+    return render (request, 'delete_record.html', context={'record': record})
+
+
+def deleted_view(request, pk):
+    record = get_object_or_404(Record, pk=pk)
+    record.delete()
+    return redirect('index_view')

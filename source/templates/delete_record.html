@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>Вы действительно хотите удалить запись?</p>
+    <p>{{record.name}}</p> 
+    <p>{{record.email}}</p> 
+    <p>{{record.text}}</p> 
+    <form action="{% url 'deleted' record.id  %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Удалить">
+        <a href="{% url 'index_view' %}">Нет</a>
+    </form>
+{% endblock %}
