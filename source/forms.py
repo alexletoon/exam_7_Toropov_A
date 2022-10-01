@@ -11,3 +11,6 @@ class RecordForm(forms.ModelForm):
     class Meta:
         model = Record
         fields = ['name', 'email', 'text']
+
+class SearchForm(forms.Form):
+    name = forms.CharField(max_length=200, required=True, label='Введите имя')
