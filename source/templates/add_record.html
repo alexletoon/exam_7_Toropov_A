@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Add new task</h2>
+
+<form action="" method="POST" >
+    {% csrf_token %}
+    {% include 'partial/record_form.html' with button_text='Создать запись' record=record %}
+
+</form>
+{% endblock %}
