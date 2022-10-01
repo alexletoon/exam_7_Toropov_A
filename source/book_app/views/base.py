@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from book_app.models import Record
-from forms import SearchForm
+from forms import SearchForm, RecordForm
 
 def index_view(request):
     records = Record.objects.filter(status='ACTIVE').order_by('-created_at').values()

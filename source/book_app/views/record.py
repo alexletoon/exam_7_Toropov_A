@@ -38,7 +38,9 @@ def delete_record_view(request, pk):
     return render (request, 'delete_record.html', context={'record': record})
 
 
+
 def deleted_view(request, pk):
     record = get_object_or_404(Record, pk=pk)
     record.delete()
     return redirect('index_view')
+

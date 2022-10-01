@@ -1,25 +1,13 @@
 [
 {
   "model": "book_app.record",
-  "pk": 1,
-  "fields": {
-    "name": "John",
-    "email": "john@john.com",
-    "text": "",
-    "created_at": "2022-10-01",
-    "changed_at": "2022-10-01",
-    "status": "ACTIVE"
-  }
-},
-{
-  "model": "book_app.record",
   "pk": 2,
   "fields": {
     "name": "Marvin",
     "email": "marvin@marvin.kz",
-    "text": "",
-    "created_at": "2022-10-01",
-    "changed_at": "2022-10-01",
+    "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eos aliquid hic vero in, autem minima, voluptates rerum commodi vitae nihil reiciendis voluptatibus consectetur, maxime sequi doloribus dolorum harum. Doloribus eligendi nobis sit laboriosam deserunt!",
+    "created_at": "2022-10-01T00:00:00Z",
+    "changed_at": "2022-10-01T09:50:55.695Z",
     "status": "ACTIVE"
   }
 },
@@ -27,11 +15,11 @@
   "model": "book_app.record",
   "pk": 3,
   "fields": {
-    "name": "Antonio Banderez",
+    "name": "Antonio",
     "email": "antban@hollywood.com",
-    "text": "",
-    "created_at": "2022-10-01",
-    "changed_at": "2022-10-01",
+    "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio minus quas, quod aperiam voluptatum deserunt maxime obcaecati beatae laboriosam eveniet quam a qui voluptatem perspiciatis in iusto! Veniam odit numquam distinctio vero hic quia ipsam tenetur quis molestiae amet. Ab.",
+    "created_at": "2022-10-01T00:00:00Z",
+    "changed_at": "2022-10-01T11:51:16.878Z",
     "status": "BLOCKED"
   }
 },
@@ -39,11 +27,11 @@
   "model": "book_app.record",
   "pk": 4,
   "fields": {
-    "name": "Sponge Bob",
+    "name": "Bob",
     "email": "sponge@squarepants.org",
-    "text": "",
-    "created_at": "2022-10-01",
-    "changed_at": "2022-10-01",
+    "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eos aliquid hic vero in, autem minima, voluptates rerum commodi vitae nihil reiciendis voluptatibus consectetur, maxime sequi doloribus dolorum harum. Doloribus eligendi nobis sit laboriosam deserunt!",
+    "created_at": "2022-10-01T00:00:00Z",
+    "changed_at": "2022-10-01T11:50:39.894Z",
     "status": "ACTIVE"
   }
 },
@@ -54,9 +42,33 @@
     "name": "Patrick",
     "email": "pat@star.kz",
     "text": "",
-    "created_at": "2022-10-01",
-    "changed_at": "2022-10-01",
+    "created_at": "2022-10-01T00:00:00Z",
+    "changed_at": "2022-10-01T00:00:00Z",
     "status": "BLOCKED"
+  }
+},
+{
+  "model": "book_app.record",
+  "pk": 8,
+  "fields": {
+    "name": "John90",
+    "email": "john@nhoj.com",
+    "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eos aliquid hic vero in, autem minima, voluptates rerum commodi vitae nihil reiciendis voluptatibus consectetur, maxime sequi doloribus dolorum harum. Doloribus eligendi nobis sit laboriosam deserunt!",
+    "created_at": "2022-10-01T07:31:59.910Z",
+    "changed_at": "2022-10-01T07:31:59.910Z",
+    "status": "BLOCKED"
+  }
+},
+{
+  "model": "book_app.record",
+  "pk": 10,
+  "fields": {
+    "name": "Johny",
+    "email": "antban@hollywood.com",
+    "text": "Новая запись о старой классике кино\r\nРедактировать",
+    "created_at": "2022-10-01T10:34:50.946Z",
+    "changed_at": "2022-10-01T11:50:30.301Z",
+    "status": "ACTIVE"
   }
 },
 {

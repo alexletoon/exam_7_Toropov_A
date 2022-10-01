@@ -11,19 +11,24 @@
 
 {% block content %}
 
+<div class="row justify-content-center">
+  <div class="col-10">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <label for="{{form.name.id_for_label}}">{{form.name.label}}</label>
+      <p>{{form.name}}</p>
+      <p>{{form.name.errors}}</p>
+      <button type="submit" class="btn btn-primary" value="Поиск"> Искать по имени</button>
+      <a class="btn btn-secondary" href="{% url 'index_view' %}">Полный список</a>
+    </form>
+  </div>
 
-<form action="" method="POST">
-  {% csrf_token %}
-  <label for="{{form.name.id_for_label}}">{{form.name.label}}</label>
-  <p>{{form.name}}</p>
-  <p>{{form.name.errors}}</p>
-  <button type="submit" class="btn btn-primary" value="Поиск"> Искать по имени</button>
-  <a class="btn btn-secondary" href="{% url 'index_view' %}">Полный список</a>
-</form>
+</div>
 
+<hr class="line">
 
-<div class="row">
-    <div class="col-sm-8">
+<div class="row justify-content-center">
+    <div class="col-sm-10">
     {% for record in records %}
       <div class="card my-3">
         <div class="card-body">
@@ -36,4 +41,6 @@
       </div>
     {% endfor %}
     </div>
+  
+
 {% endblock %}

@@ -10,11 +10,15 @@
 {% endblock %}
 
 {% block content %}
-    <h5>Добавить новую запись</h5>
+<div class="container mx-5">
+  <h5>Добавить новую запись</h5>
+  <hr class="line">
 
-    <form action="" method="POST" >
-        {% csrf_token %}
-        {% include 'partial/record_form.html' with button_text='Создать запись' record=record %}
+  <form action="" method="POST" >
+      {% csrf_token %}
+      {% include 'partial/record_form.html' with button_text='Создать запись' record=record %}
 
-    </form>
+  </form>
+</div>
+
 {% endblock %}
